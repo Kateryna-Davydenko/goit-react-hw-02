@@ -4,6 +4,7 @@ import Description from "./components/Description/Description";
 import Options from "./components/Options/Options";
 import Feedback from "./components/Feedback/Feedback";
 import { useState, useEffect } from "react";
+import Notification from "./components/Notification/Notification";
 
 const App = () => {
   const [votingData, setVotingData] = useState(() => {
@@ -73,7 +74,7 @@ const App = () => {
           positiveFeedback={positiveFeedback}
         />
       ) : (
-        <h2>No feedback yet</h2>
+        <Notification />
       )}
     </>
   );
